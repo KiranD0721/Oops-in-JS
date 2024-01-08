@@ -22,6 +22,7 @@ Polymorphism is a technique that allows a variable, function, or object to take 
 
 The repository will be updated to cover additional OOP concepts, including:
 
+-Pillars of Oops
 - Object Literals
 - Factories
 - Constructors
