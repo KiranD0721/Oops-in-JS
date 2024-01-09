@@ -254,8 +254,8 @@ Morphism mean --> forms
 
 //----------------Creating factories--------
 
-// if say we use objects in multiple places and if any properties needs
-//to be changed it ll be difficult to do the change in every object
+// if say we use objects in multiple places and  any properties needs
+//to be changed it ll be difficult to do the modification in every object
 //inorder to overcome factories are used to create the object and 
 //returned while using
 
