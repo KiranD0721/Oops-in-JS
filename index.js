@@ -232,3 +232,138 @@ Morphism mean --> forms
 // animalMakesSound(dog);           // Output: Woof! Woof!
 // animalMakesSound(cat);           // Output: Meow!
 
+/* ----------------------------------------------------------------------------------------- */
+
+//Creating Object literals
+
+// const circle = {
+//     radius : 1,
+//     location : {
+//         x : 1,
+//         y : 1,
+//     },
+//     draw : function(){
+//         console.log('draw');
+//     }
+// };
+
+// // In circle there are two properties and one method. 
+// // Properties used to hold the value.
+// // Methods used to define the logic.
+// circle.draw();
+
+//----------------Creating factories--------
+
+// if say we use objects in multiple places and if any properties needs
+//to be changed it ll be difficult to do the change in every object
+//inorder to overcome factories are used to create the object and 
+//returned while using
+
+// function createCircle(radius){
+//     return{
+//         radius, // if both key and value are same need to add the value [ES6]
+//         draw : function(){
+//             console.log('draw!!!')
+//         }
+//     }
+// }
+
+// const circle1 = createCircle(1);
+// circle1.draw();
+
+/* ------------------Using Constructor function to create objects-------- */
+
+//In constructor function function name should start with caps
+
+// function Circle(radius){
+//     console.log('this' , this) // use two variables one with creating object with new word and without it u ll see the difference
+//     this.radius = radius;
+//     this.draw = function(){
+//         console.log('Draw!');
+//     }
+// };
+
+// const createAnotherCircle = new Circle(1);
+// createAnotherCircle.draw();
+
+// 'NEW' creates empty object {}
+// Then points the 'this' to the created object
+//and finally returned by using function name
+
+//This keyword points global object by default
+// if you try to create same Circle object without new word the this present 
+// inside the func points out to the global object
+// Example if u try this is browser global object is window
+
+// const anotherCircle = Circle(1); /// see the line number 278
+
+/* ---------------------------------Value types vs Reference types----------------------- */
+
+/* ---    Value types                          Reference types
+            Number                               Objects
+            String                               Functions
+            Boolean                              Arrays
+            Symbol[ES6]
+            undefined
+            null  
+                                                                      -----------------------*/
+// In js Functions are objects
+
+//Primitives are copied by their value
+//Objects are copied by their reference
+
+//lets see with one example
+
+// let x = 20;
+// let y = x;
+
+// x = 10;
+// console.log(`x = ${x}`);  // x = 10
+// console.log(`y = ${y}`);  // y = 20       
+
+// You may think 'y' should be 20 too that is not the case
+// As said earlier primitives are copied by their values which means
+// initially we initialized value of x = 20 
+// then y = x which means 'y' value is set to the value of the x that is 20;
+//then we changed the value of x to 10
+//Y remains the same 
+ //because  there is no sign that if the value x changes values of y must be changed 
+ // we are only changing the value of x in line number 320
+ 
+ /* ---------------------------------------------------------------------------------------- */
+ //Now we will do that in objects
+
+//  let a = {value  : 10};
+//  let b = a;
+
+//  a.value = 20;
+// console.log(`a = ${a.value}`); // a = {value :20 }   
+// console.log(`b = ${b.value}`); // b = {value : 20 } 
+//because ==> Objects are copied by their reference
+
+/* ---------------------------------Adding and Deleting Properties------------------------------ */
+
+// function Circle(radius){
+//     this.radius = radius;
+//     this.draw = function(){
+//         console.log('Draw!!!!');
+//     }
+// }
+
+// const circle  = new Circle(10);
+
+//Adding properties by two ways Dot notation or by brackets
+
+//Dot notation
+// circle.location = { x : 10};
+
+// //Bracket
+// circle['range'] = { c : 20};
+
+// Deleting properties can be done in both the ways
+
+// delete circle.location; //Dot notation
+// delete circle['range']; // Brackets
+
+/* --------------------------------------------------------------------------- */
+
